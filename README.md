@@ -70,34 +70,45 @@ MERCI/
 ## Baselines & tasks
 
 We provide code (after publication) and results for:
-- **Emotion classification** (reporting accuracy, precision, recall, F1; macro-averaged where relevant)  
-- **Sentiment regression** (MAE, RMSE, CCC)  
-- **Emotion-aware response generation** (BLEU-1/2, ROUGE-L, METEOR, perplexity)
+- **Emotion classification** (reporting accuracy, precision, recall, F1)  
+- **Sentiment regression** (MSE, MAE, R2)  
+- **Emotion-aware response generation** (BLEU, ROUGE1/2/L, METEOR, perplexity)
 
 ### Key results (from the paper)
 
-> Replace `TBD` with exact numbers later. You may also export your result tables as images into `assets/` and embed them.
 
 **Classification (macro-F1 ↑)**
 
-| Model            | Macro-F1 | F1 (Neutral) | F1 (Positive) | F1 (Negative) |
+| Model            | Accuracy |   Precision  |     Recall    |       F1      |
 |------------------|---------:|-------------:|--------------:|--------------:|
-| Transformer-A    |   TBD    |      TBD     |      TBD      |      TBD      |
-| Transformer-B    |   TBD    |      TBD     |      TBD      |      TBD      |
+| DistilBERT       |   0.93   |      0.57    |      0.57     |      0.57     |
+| BERT             |   0.90   |      0.36    |      0.36     |      0.36     |
+| RoBERTa          |   0.87   |      0.43    |      0.44     |      0.44     |
+| GPT-4            |   0.85   |      0.41    |      0.55     |      0.44     |
+| GPT-NEO          |   0.58   |      0.30    |      0.30     |      0.29     |
+| GPT-4o-mini      |   0.67   |      0.28    |      0.27     |      0.28     |
 
 **Sentiment regression**
 
-| Model         | MAE ↓ | RMSE ↓ | CCC ↑ |
+| Model         |  MSE  |  MAE   |  R2   |
 |---------------|------:|-------:|------:|
-| Baseline-X    |  TBD  |  TBD   |  TBD  |
-| Baseline-Y    |  TBD  |  TBD   |  TBD  |
+| DistilBERT    | 0.024 | 0.106  | 0.828 |
+| BBERT         | 0.032 | 0.129  | 0.778 |
+| RoBERTa       | 0.050 | 0.165  | 0.650 |
+| GPT-4         | 0.099 | 0.235  | 0.445 |
+| GPT-NEO       | 0.143 | 0.300  | 0.012 |
+| GPT-4o-mini   | 0.113 | 0.252  | 0.216 |
 
 **Emotion-aware generation**
 
-| Model / Prompting         | BLEU-1 ↑ | BLEU-2 ↑ | ROUGE-L ↑ | METEOR ↑ | PPL ↓ |
-|---------------------------|---------:|---------:|----------:|---------:|------:|
-| GPT-4 (emotion-aware)     |   TBD    |   TBD    |   TBD     |   TBD    |  TBD  |
-| GPT-3.5 (vanilla)         |   TBD    |   TBD    |   TBD     |   TBD    |  TBD  |
+| Model        | BLEU     | ROUGE-1  | ROUGE-2   | ROUGE-L  | METEOR | Perplexity |
+|--------------|---------:|---------:|----------:|---------:|-------:|-----------:|
+| BERT2BERT    |   0.23   |   0.36   |   0.14    |   0.37   |  0.22  |  3.41      |
+| T5           |   0.31   |   0.42   |   0.18    |   0.40   |  0.26  |  2.68      |
+| BART         |   0.34   |   0.45   |   0.22    |   0.44   |  0.30  |  2.41      |
+| GPT-4o-mini  |   0.83   |   0.33   |   0.13    |   0.26   |  0.32  |  2.66      |
+| GPT-4        |   0.91   |   0.40   |   0.14    |   0.27   |  0.36  |  2.57      |
+| GPT-3.5      |   0.84   |   0.37   |   0.12    |   0.24   |  0.31  |  2.61      |
 
 > Notes: labels from facial expressions and sentiment analysis are **assistive** signals, not ground truth of internal affect.
 
