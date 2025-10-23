@@ -24,9 +24,9 @@ Multimodal Dataset for Personalised and Emotionally-Aware Dialogues
 ### Tri-view capture
 
 <p align="center">
-  <img src="assets/tri_head.jpg" width="31%" alt="Head camera (robot view)">
-  <img src="assets/tri_external_front.jpg" width="31%" alt="External front camera">
-  <img src="assets/tri_side.jpg" width="31%" alt="External side camera">
+  <img src="assets/beauty_robot.jpeg" width="31%" alt="Head camera (robot view)">
+  <img src="assets/beauty_front.jpeg" width="31%" alt="External front camera">
+  <img src="assets/beauty_side.jpeg" width="31%" alt="External side camera">
 </p>
 
 <p align="center"><em>Tri-view video streams aligned with audio and ASR text.</em></p>
@@ -35,14 +35,14 @@ Multimodal Dataset for Personalised and Emotionally-Aware Dialogues
 ### Interaction overview
 
 <p align="center">
-  <img src="assets/overview.png" width="80%" alt="Overview of MERCI interaction flow (user–robot–ASR–sentiment–FER)">
+  <img src="assets/overview_collection.pdf (1).png" width="80%" alt="Overview of MERCI interaction flow (user–robot–ASR–sentiment–FER)">
 </p>
 
 
 ### Annotation & pipeline checks (assistive labels)
 
 <p align="center">
-  <img src="assets/pipeline.png" width="95%" alt="Pipeline: Whisper ASR, sentiment analysis, MobileNetV2 FER, SSD+NMS, alignment">
+  <img src="assets/pipline_data_testing.drawio.png" width="95%" alt="Pipeline: Whisper ASR, sentiment analysis, MobileNetV2 FER, SSD+NMS, alignment">
 </p>
 
 - Whisper ASR with **word/sentence error rate** (WER/SER)
